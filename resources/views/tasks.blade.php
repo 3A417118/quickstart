@@ -46,7 +46,16 @@
                                     <div>{{ $task->name }} </div>
                                 </td>
                                 <td>
-                                    <!-- 쩘우좬쬟간ヶ턵 -->
+                                        <!-- 쬟간ヶ턵 -->
+    <td>
+        <form action="/task/{{ $task->id }}" method="POST">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+
+            <button>쬟간υ걷</button>
+        </form>
+    </td>
+
                                 </td>
                             </tr>
                         @endforeach
