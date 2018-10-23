@@ -1,3 +1,5 @@
+@include('common.errors')
+
 Route::post('/task', function (Request $request) {
     $validator = Validator::make($request->all(), [
         'name' => 'required|max:255',
